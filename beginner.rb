@@ -156,3 +156,92 @@
 # puts "入力が終了しました。入力された要素は順に"
 # array.each {|n| p n}
 # puts "です"
+
+# 20.整数値を2つ入力させ、1つめの値を2つめの値で割った結果を表示し、続けてその結果に2つめの値を掛けた結果を表示するプログラムを作成せよ。計算はすべて整数型で行うこと
+# puts "整数値を2つ入力してください。1番目に入力された値を2つめの値で割った結果を表示し、その後その結果に2つめの値をかけた結果を表示します。"
+# puts "1つめの整数値を入力してください。"
+# input = gets.to_i
+# puts "#{input}が入力されました。2つめの整数値を入力してください"
+# second_input = gets.to_i
+# puts "#{second_input}が入力されました。#{input}を#{second_input}で割ると#{input / second_input}で、さらに#{second_input}を掛けると#{(input / second_input) * second_input}です"
+
+# 21.整数値を入力させ、その値が5よりも大きく、かつ、20よりも小さければOKと表示するプログラムを作成せよ。
+# puts "整数値を入力してください。その値が6以上かつ20未満であればOKを返します。それ以外はNGが返されます。"
+# input = gets.to_i
+# if input >= 6 && input < 20
+#   puts "OK"
+# else
+#   puts "NG"
+# end
+
+# 22.整数値を入力させ、その値が-10以下、または、10以上であればOKと表示するプログラムを作成せよ。
+# puts "整数値を入力してください。入力された値が-10以下または10以上の場合OKを返します。それ以外はNGが返されます。"
+# input = gets.to_i
+# if input <= -10 || input >= 10
+#   puts "OK"
+# else
+#   puts "NG"
+# end
+
+# 23.整数値を入力させ、その値が-5以上10未満であればOK、そうでなければNGと表示するプログラムを作成せよ。
+# puts "整数値を入力してください。入力された値が-5以上10未満であればOK、それ以外はNGを返します"
+# input = gets.to_i
+# if input >= -5 && input < 10
+#   puts "OK"
+# else
+#   puts "NG"
+# end
+
+# 24.整数値を入力させ、その値が-10以上0未満、または、10以上であればOK、そうでなければNGと表示するプログラムを作成せよ。
+# puts "整数値を入力してください。入力された値が-10以上0未満または10以上であればOK、そうでなければNGを返します。"
+# input = gets.to_i
+# if (input >= -10 && input < 0 ) || input >= 10
+#   puts "OK"
+# else
+#   puts "NG"
+# end
+
+# 25.整数値を入力させ、その値が-10未満ならrange 1、-10以上0未満であればrange 2、0以上であればrange 3、と表示するプログラムを作成せよ。
+# puts "整数値を入力してください。入力された値が-10未満ならrange 1、-10以上0未満であればrange 2、0以上であればrange 3を返します"
+# input = gets.to_i
+# if input < -10
+#   puts "range 1"
+# elsif input >= -10 && input < 0
+#   puts "range 2"
+# else
+#   puts "range3"
+# end
+
+# 26.整数値を入力させ、その値が1ならone、2ならtwo、3ならthree、それ以外ならothersと表示するプログラムをswicth-case文を使って作成せよ。
+# puts "整数値を入力してください。入力値が1ならone、2ならtwo、3ならthree、それ以外ならothersを返します。"
+# input = gets.to_i
+# case input
+# when 1
+#   puts "one"
+# when 2
+#   puts "two"
+# when 3
+#   puts "three"
+# else
+#   puts "others"
+# end
+
+# 27.整数値を入力させ、1からその値までの総和を計算して表示するプログラムを作成せよ。ただし、0以下の値を入力した場合は0と表示する。
+# puts "整数値を入力してください。1から入力した値までの総和を計算して表示します。0以下の値が入力された場合は0が返ります"
+# input = gets.to_i
+# if input > 0
+#   array = (1..input).to_a
+#   p array.sum
+# else
+#   p 0
+# end
+
+# 28.整数値を入力させ、その値の階乗を表示するプログラムを作成せよ。ただし、0以下の値を入力した場合は1と表示する。
+puts "整数値を入力してください。入力値の階乗を表示します。0以下の値を入力した場合は1を返します。"
+input = gets.to_i
+if input > 0
+  sum = (1..input).inject(1, :*)
+  p sum
+else
+  p 1
+end
