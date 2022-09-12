@@ -473,11 +473,17 @@ while input < 2
   puts "2以上の整数値を入力してください。"
   input = gets.to_i
 end
-count = 1
+
 result = 0
+count = 1
+
 while result != 1
   if input.even?
-
-    puts "#{count}回目の計算結果は#{input}です"
+    input = input / 2
+  else
+    input = (input * 3) + 1
   end
+  result = input
+  puts "#{count}回目の計算: #{result}"
+  count += 1
 end
