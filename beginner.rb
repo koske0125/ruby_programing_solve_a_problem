@@ -488,17 +488,33 @@
 #   count += 1
 # end
 
-# 九九の表を、2重の繰り返しを使って表示するプログラムを作成せよ。2重の繰り返しを使わず単に表示するだけではダメ。値の間はタブ(\t)を使って間をあけること。
+# 49.九九の表を、2重の繰り返しを使って表示するプログラムを作成せよ。2重の繰り返しを使わず単に表示するだけではダメ。値の間はタブ(\t)を使って間をあけること。
 # 二次元配列？
 
+# count = 1
+# array = []
+#
+# while count != 10
+#   array << [count * 1,count * 2,count * 3,count * 4,count * 5,count * 6,count * 7,count * 8,count * 9]
+#   count += 1
+# end
+#
+# array.each do |result|
+#   p result.join(" ")
+# end
+
+# 50.1から100までの値を繰り返しで表示するが、3の倍数の時はfoo、5の倍数の時はbarと数字の代わりに表示するプログラムを作成せよ。なお、3と5の両方の倍数の時はfoobarと表示される。
+
 count = 1
-array = []
-
-while count != 10
-  array << [count * 1,count * 2,count * 3,count * 4,count * 5,count * 6,count * 7,count * 8,count * 9]
+while count < 101
+  if count % 15 == 0
+    puts "foobar"
+  elsif count % 5 == 0
+    puts "bar"
+  elsif count % 3 == 0
+    puts "foo"
+  else
+    puts count
+  end
   count += 1
-end
-
-array.each do |result|
-  p result.join(" ")
 end
