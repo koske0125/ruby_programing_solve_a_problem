@@ -467,32 +467,38 @@
 
 # 48.最初に2以上の整数値を入力し、次の規則で計算し、計算回数と計算結果を表示し、計算結果が1になるまで繰り返すプログラムを作成せよ。
 # 規則：ある値が偶数ならその値を1/2にする。奇数ならその値を3倍して1を足す。
-puts "2以上の整数値を入力してください。規則に従って計算し、その計算回数と結果を表示し、計算結果が1になるまで繰り返します。"
-input = gets.to_i
-while input < 2
-  puts "2以上の整数値を入力してください。"
-  input = gets.to_i
-end
-
-result = 0
-count = 1
-
-while result != 1
-  if input.even?
-    input = input / 2
-  else
-    input = (input * 3) + 1
-  end
-  result = input
-  puts "#{count}回目の計算: #{result}"
-  count += 1
-end
+# puts "2以上の整数値を入力してください。規則に従って計算し、その計算回数と結果を表示し、計算結果が1になるまで繰り返します。"
+# input = gets.to_i
+# while input < 2
+#   puts "2以上の整数値を入力してください。"
+#   input = gets.to_i
+# end
+#
+# result = 0
+# count = 1
+#
+# while result != 1
+#   if input.even?
+#     input = input / 2
+#   else
+#     input = (input * 3) + 1
+#   end
+#   result = input
+#   puts "#{count}回目の計算: #{result}"
+#   count += 1
+# end
 
 # 九九の表を、2重の繰り返しを使って表示するプログラムを作成せよ。2重の繰り返しを使わず単に表示するだけではダメ。値の間はタブ(\t)を使って間をあけること。
 # 二次元配列？
 
-while
-  while
+count = 1
+array = []
 
-  end
+while count != 10
+  array << [count * 1,count * 2,count * 3,count * 4,count * 5,count * 6,count * 7,count * 8,count * 9]
+  count += 1
+end
+
+array.each do |result|
+  p result.join(" ")
 end
