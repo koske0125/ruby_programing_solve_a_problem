@@ -521,11 +521,21 @@
 
 # 51.指定した金額を100円玉と10円玉と1円玉だけで、できるだけ少ない枚数で支払いたい。金額を入力するとそれぞれの枚数を計算して表示するプログラムを作成せよ。
 
-puts "支払金額を入力してください。100円、10円、1円玉のみでできるだけ少ない枚数で支払える枚数を表示します。"
+# puts "支払金額を入力してください。100円、10円、1円玉のみでできるだけ少ない枚数で支払える枚数を表示します。"
+# input = gets.to_i
+#
+# hundred_yen = input / 100
+# input = input % 100
+# ten_yen = input / 10
+# input = input % 10
+# puts "100円が#{hundred_yen}枚、10円が#{ten_yen}、1円が#{input}枚です。"
+
+# 52.西暦を入力したらその年が閏（うるう）年かどうかを判定するプログラムを作成せよ。なお、4で割り切れる年のうち、100で割り切れないか、400で割り切れる年は閏年である。
+puts "西暦を入力してください。閏年かを判定します"
 input = gets.to_i
 
-hundred_yen = input / 100
-input = input % 100
-ten_yen = input / 10
-input = input % 10
-puts "100円が#{hundred_yen}枚、10円が#{ten_yen}、1円が#{input}枚です。"
+if (input % 4 == 0 && input % 100 != 0) || (input % 4 == 0 && input % 400 ==0)
+  puts "#{input}年は閏年です"
+else
+  puts "#{input}年は閏年ではありません"
+end
