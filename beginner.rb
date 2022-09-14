@@ -505,16 +505,27 @@
 
 # 50.1から100までの値を繰り返しで表示するが、3の倍数の時はfoo、5の倍数の時はbarと数字の代わりに表示するプログラムを作成せよ。なお、3と5の両方の倍数の時はfoobarと表示される。
 
-count = 1
-while count < 101
-  if count % 15 == 0
-    puts "foobar"
-  elsif count % 5 == 0
-    puts "bar"
-  elsif count % 3 == 0
-    puts "foo"
-  else
-    puts count
-  end
-  count += 1
-end
+# count = 1
+# while count < 101
+#   if count % 15 == 0
+#     puts "foobar"
+#   elsif count % 5 == 0
+#     puts "bar"
+#   elsif count % 3 == 0
+#     puts "foo"
+#   else
+#     puts count
+#   end
+#   count += 1
+# end
+
+# 51.指定した金額を100円玉と10円玉と1円玉だけで、できるだけ少ない枚数で支払いたい。金額を入力するとそれぞれの枚数を計算して表示するプログラムを作成せよ。
+
+puts "支払金額を入力してください。100円、10円、1円玉のみでできるだけ少ない枚数で支払える枚数を表示します。"
+input = gets.to_i
+
+hundred_yen = input / 100
+input = input % 100
+ten_yen = input / 10
+input = input % 10
+puts "100円が#{hundred_yen}枚、10円が#{ten_yen}、1円が#{input}枚です。"
